@@ -79,7 +79,8 @@ module Fluent
       private
 
       def aws_sdk_v2?
-        @aws_sdk_v2 ||= Gem.loaded_specs['aws-sdk-core'].version < Gem::Version.create('3')
+        true
+        #@aws_sdk_v2 ||= Gem.loaded_specs['aws-sdk-core'].version < Gem::Version.create('3')
       end
 
       def client_class
